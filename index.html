@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login-form</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <video autoplay muted loop id="myvideo">
+        <source src="/1de92045d03b59175be307844d008d6341222880-1080p (1).mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <h1>Please Login</h1>
+        <form action="#">
+            <div class="form-control">
+                <input type="email" required>
+                <label for="">Email</label>
+            </div>
+            <div class="form-control">
+                <input type="password" required>
+                <label for="">Password</label>
+            </div>
+            <button class="btn">Login</button>
+            <p class="text">Don't have an account ? <a href="#">Register</a></p>
+
+        </form>
+    </div>
+</body>
+<script>
+    const lables = document.querySelector(".form-control lable");
+    lables.forEach((lable) => {
+        lable.innerHTML = lable.innerText.split("")
+            .map((letter, idx) => `<lable style="transition-delay:${idx * 60}ms">
+        ${letter}></lable>`).join("");
+
+    });
+</script>
+
+</html>
